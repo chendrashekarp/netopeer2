@@ -180,8 +180,8 @@ main(void)
 	
 	else if(is_FirstTime==3)
 	{	
-	printf("saving the data to the file /opt/PureSoftware/MP_3.0/config_data_xml/del_mgmt.xml edit the file (remove 1st and last line-mandatory )\n");
-	cmdline=strdup("get --filter-xpath /o-ran-delay-management:* --out /opt/PureSoftware/MP_3.0/config_data_xml/del_mgmt.xml");
+	printf("saving the data to the file /home/user/PureSoftware/MP_3.0/config_data_xml/del_mgmt.xml edit the file (remove 1st and last line-mandatory )\n");
+	cmdline=strdup("get --filter-xpath /o-ran-delay-management:* --out /home/user/PureSoftware/MP_3.0/config_data_xml/del_mgmt.xml");
 
 	is_FirstTime++;
 	}
@@ -189,9 +189,9 @@ main(void)
 	{
 		getchar();
 		
-		system("vi /opt/PureSoftware/MP_3.0/config_data_xml/del_mgmt.xml");		
+		system("vi /home/user/PureSoftware/MP_3.0/config_data_xml/del_mgmt.xml");		
 
-		cmdline=strdup("edit-config --target running --config=/opt/PureSoftware/MP_3.0/config_data_xml/del_mgmt.xml --defop replace");
+		cmdline=strdup("edit-config --target running --config=/home/user/PureSoftware/MP_3.0/config_data_xml/del_mgmt.xml --defop replace");
 		is_FirstTime++;
 	}
 
